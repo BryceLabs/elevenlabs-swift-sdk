@@ -124,7 +124,7 @@ public struct TokenService: Sendable {
             serverUrl: websocketURL,
             roomName: "", // LiveKit extracts from JWT
             participantName: "", // LiveKit extracts from JWT
-            participantToken: token,
+            participantToken: token
         )
     }
 
@@ -136,7 +136,7 @@ public struct TokenService: Sendable {
         components.queryItems = [
             URLQueryItem(name: "agent_id", value: agentId),
             URLQueryItem(name: "source", value: "swift_sdk"),
-            URLQueryItem(name: "version", value: SDKVersion.version),
+            URLQueryItem(name: "version", value: SDKVersion.version)
         ]
 
         guard let url = components.url else {
