@@ -127,7 +127,7 @@ extension DataChannelReceiver: RoomDelegate {
         let message = ReceivedMessage(
             id: UUID().uuidString,
             timestamp: Date(),
-            content: .agentTranscript(event.response),
+            content: .agentTranscript(event.response)
         )
         yield(message: message)
         logger.debug("Agent response: \(event.response)")
